@@ -9,6 +9,7 @@ langkahnya untukke lokal
     <li>lalu composer install</li>
     <li>lalu php artisan key:generate</li>
     <li>php artisan migrate:fresh --seed</li>
+	 <li>php artisan storage:link</li>
     <li>untuk login cek aja di file DatabaseSeeder</li>
 </ol>
 </h3>
