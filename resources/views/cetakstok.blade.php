@@ -29,7 +29,7 @@
 
 <body>
 
-	<h3>Laporan Barang Masuk</h3>
+	<h3>Laporan Stok Barang</h3>
 	<table class="table-striped table-bordered table">
 		<thead class="thead-light">
 			<tr>
