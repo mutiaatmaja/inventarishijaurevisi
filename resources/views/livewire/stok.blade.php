@@ -9,9 +9,10 @@
 				<input class="form-control me-2" type="text" placeholder="Cari Barang" wire:model.live='cari'>
 
 			</div>
+
 			<div wire:loading>
 				loading ...
-			</div>
+			</div><a href="{{ route('cetakstok') }}" target="_blank" class="btn btn-primary">Cetak PDF</a>
 		</div>
 
 		<hr />

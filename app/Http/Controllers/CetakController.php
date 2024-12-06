@@ -11,6 +11,7 @@ use Barryvdh\DomPDF\Facade\Pdf;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\ExportPembelian;
 use App\Exports\ExportPenjualan;
+use App\Models\Barang;
 
 class CetakController extends Controller
 {
@@ -46,6 +47,14 @@ class CetakController extends Controller
             ]);
             return $pdf->stream('laporan-pembelian.pdf');
         };
+    }
+    public function cetakStok()
+    {
+        $barang = Barang::all();
+        $pdf = PDF::loadView('cetakstok', [
+            'barang' => $barang
+        ]);
+        return $pdf->stream('laporan-stok.pdf');
     }
     public function cetakNota($id)
     {

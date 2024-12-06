@@ -45,10 +45,10 @@
 				@foreach ($barangmasuk as $data)
 					<tr>
 						<td>{{ $loop->iteration }}</td>
-						<td>{{ $data->nama_barang }}</td>
+						<td>{{ $data->barang->nama }}</td>
 						<td>{{ $data->jumlah_barang }}</td>
-						<td>{{ $data->ukuran }}</td>
-						<td><img class="img-fluid" src="{{ public_path('/storage/fotobarang/' . $data->foto) }}" alt="nama gambar"
+						<td>{{ $data->barang->ukuran }}</td>
+						<td><img class="img-fluid" src="{{ public_path('/storage/fotobarang/' . $data->barang->foto) }}" alt="nama gambar"
 								style="max-width: 100px"></td>
 						<td>{{ $data->tanggal_masuk }}</td>
 					</tr>
@@ -74,11 +74,11 @@
 				@foreach ($barangkeluar as $data)
 					<tr>
 						<td>{{ $loop->iteration }}</td>
-						<td>{{ $data->nama_barang }}</td>
+						<td>{{ $data->barang->nama }}</td>
 						<td>{{ $data->jumlah_barang }}</td>
-						<td>{{ $data->ukuran }}</td>
+						<td>{{ $data->barang->ukuran }}</td>
 						<td>
-							<img class="img-fluid" src="{{ public_path('/storage/fotobarang/' . $data->foto) }}" alt="nama gambar"
+							<img class="img-fluid" src="{{ public_path('/storage/fotobarang/' . $data->barang->foto) }}" alt="nama gambar"
 								style="max-width: 100px">
 						</td>
 						<td>{{ $data->tanggal_keluar }}</td>
@@ -108,11 +108,11 @@
 				@foreach ($penjualan as $data)
 					<tr>
 						<td>{{ $loop->iteration }}</td>
-						<td>{{ $data->nama_barang }}</td>
+						<td>{{ $data->barang->nama }}</td>
 						<td>{{ $data->jumlah_barang }}</td>
-						<td>{{ $data->ukuran }}</td>
+						<td>{{ $data->barang->ukuran }}</td>
 						<td>
-							<img class="img-fluid" src="{{ public_path('/storage/fotobarang/' . $data->foto) }}" alt="nama gambar"
+							<img class="img-fluid" src="{{ public_path('/storage/fotobarang/' . $data->barang->foto) }}" alt="nama gambar"
 								style="max-width: 100px">
 						</td>
 						<td>{{ $data->tanggal }}</td>
@@ -142,11 +142,11 @@
 				@foreach ($pembelian as $data)
 					<tr>
 						<td>{{ $loop->iteration }}</td>
-						<td>{{ $data->nama_barang }}</td>
+						<td>{{ $data->barang->nama }}</td>
 						<td>{{ $data->jumlah_barang }}</td>
-						<td>{{ $data->ukuran }}</td>
+						<td>{{ $data->barang->ukuran }}</td>
 						<td>
-							<img class="img-fluid" src="{{ public_path('/storage/fotobarang/' . $data->foto) }}" alt="nama gambar"
+							<img class="img-fluid" src="{{ public_path('/storage/fotobarang/' . $data->barang->foto) }}" alt="nama gambar"
 								style="max-width: 100px">
 						</td>
 						<td>{{ $data->tanggal }}</td>
