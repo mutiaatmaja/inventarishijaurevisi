@@ -27,3 +27,4 @@ Route::get('/stok', Stok::class)->middleware(['auth', 'role:admin'])->name('stok
 
 Route::get('/cetak/{jenis}', [CetakController::class, 'cetak'])->middleware(['auth', 'role:admin'])->name('cetak');
 Route::get('/excel/{jenis}', [CetakController::class, 'excel'])->middleware(['auth', 'role:admin'])->name('excel');
+Route::get('/cetaknota/{id}', [CetakController::class, 'cetakNota'])->middleware(['auth', 'role:admin'])->name('cetaknota');

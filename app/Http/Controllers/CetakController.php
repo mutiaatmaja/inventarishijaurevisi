@@ -47,6 +47,15 @@ class CetakController extends Controller
             return $pdf->stream('laporan-pembelian.pdf');
         };
     }
+    public function cetakNota($id)
+    {
+        $penjualan = Penjualan::find($id);
+
+        $pdf = PDF::loadView('cetaknota', [
+            'penjualan' => $penjualan
+        ]);
+        return $pdf->stream('nota-penjualan.pdf');
+    }
     public function excel($jenis)
     {
         if ($jenis == 'penjualan') {

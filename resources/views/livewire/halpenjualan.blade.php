@@ -123,7 +123,7 @@
 								<button class="btn btn-warning me-2" wire:click='edit("{{ $data->id }}")'>Edit</button>
 								<button class="btn btn-danger me-2" wire:click='hapus("{{ $data->id }}")'
 									wire:confirm='Anda yakin ?'>Hapus</button>
-								<button class="btn btn-info me-2" wire:click='edit("{{ $data->id }}")'>Nota</button>
+								<a href="{{ route('cetaknota', ['id' => $data->id]) }}" target="_blank" class="btn btn-info me-2">Nota</a>
 							</div>
 						</td>
 					</tr>
